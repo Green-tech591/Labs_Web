@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general_styles.css">
+
+    <link rel="stylesheet" href="/css/Up-Down.css">
+    <link rel="stylesheet" href="/css/form.css">
+
+    <title>Добавить запись</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <img src="/images/BlogLogo.png" alt="logo">
+                </div>
+
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="nav">
+                    <div class="img_profile_div">
+                        <img class="img_profile" src="/images/Profile.svg" alt="photo">
+                    </div>
+
+                    <div class="nav_links">
+
+                        <a class="nav_link" href="#">@UserAccountLogin</a>
+                        <button class="nav_links_btn white_btn">Новая запись</button>
+                        <a class="white_border">Выйти</a>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="add_post m_top_60px">
+        <div class="container">
+            <h1>Добавить запись</h1>
+
+            <form class="form m_top_40px" action="/html/post-add.html" method="post">
+                <div class="form_content">
+                    <div class="add_post_items">
+                        <div class="add_post_item m_top_20px">
+                            <label class="form_label" for="add_post_title">Заголовок</label>
+                            <input id="entry_title" class="form_input" 
+                            type="text"
+                            name="user_entry"
+                            maxlength='255'>
+                        </div>
+
+                        <div class="add_post_item m_top_20px">
+                            <label class="form_label" for="add_post_text">Текст</label>
+                            <textarea id="add_post_text" class="form_input form_item_height" type="text"
+                                name="user_text"></textarea>
+                        </div>
+
+                        <div class="add_post_item m_top_20px">
+                            <label class="form_label" for="add_post_category">Выберите категорию</label>
+                            <input id="add_post_category" class="form_input" list="add_post_categories"
+                                name="add_post_categories">
+                            <datalist id="add_post_categories">
+                                <option value="GIT">
+                                <option value="FIGMA">
+                                <option value="Консоль"></option>
+                                <option value="Visual Studio"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="add_post_item m_top_20px d-flex-left">
+
+                            <div>
+                                <input id="add_post_img" class="form_input form_input_file"
+                                    name="user_add_img" type="file" accept="image/*">
+
+                                <label class="form_label form_label-add-img" for="add_post_img">
+
+                                    <span class="form_label-icon-wrapper">
+                                        <img class="form_label-icon" src="/images/svg_add_file.svg" alt="Выбрать файл">
+                                    </span>
+                                    <span class="form_label-button-text">Прикрепить файл изображения</span>
+
+                                </label>
+                            </div>
+
+                            <div>
+                                <img id="img_add_file">
+                            </div>
+
+                        </div>
+
+                        <div class="form_footer">
+                            <button id="btn_add_post" class="form_btn btn_violet" type="submit">Опубликовать</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_nav">
+                    <a href="https://github.com/Green-tech591/Labs_Web" class="nav_link blue_link">Об авторе</a>
+                    <a href="#" class="nav_link blue_link">Технологии</a>
+                </div>
+
+                <p class="blog_year">© Blog, 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/form_post_add.js"></script>
+</body>
+
+</html>

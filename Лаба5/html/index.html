@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general_styles.css">
+    <link rel="stylesheet" href="/css/Up-Down.css">
+
+
+    <title>Лента публикаций</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <img src="/images/BlogLogo.png" alt="logo">
+                </div>
+
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="nav">
+                    <div class="img_profile_div">
+                        <img class="img_profile" src="/images/Profile.svg" alt="photo">
+                    </div>
+
+                    <div class="nav_links">
+
+                        <a class="nav_link white_border" href="#">Войти</a>
+                        <a class="nav_link white_border" href="reg.html">Зарегистрироваться</a>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main m_top_60px">
+        <div class="container">
+            <h1 class="main_title">Последние публикации</h1>
+
+            <div class="main_content m_top_40px">
+
+                <div class="main_left">
+
+                    <div class="main_items">
+
+                        <div class="main_item" data-categories="Git, Console">
+                            <img class="main_item_img" src="/images/post-1.png" alt="photo">
+
+                            <h2 class="main_item_title">Работа с Git в Visual Studio Code</h2>
+
+                            <p class="main_item_text">Один из способов работать с Гитом.</p>
+
+                            <div class="main_item_categories">
+                                <span class="main_item_category">Git</span>
+                                <span class="main_item_category">Консоль</span>
+                            </div>
+                        </div>
+
+                        <div class="main_item" data-categories="Figma">
+                            <img class="main_item_img" src="/images/post-2.png" alt="photo">
+
+                            <h2 class="main_item_title">Adobe покупают Фигму. Всё пропало?</h2>
+
+                            <p class="main_item_text">Не факт, но есть разные мнения.</p>
+
+                            <div class="main_item_categories">
+                                <span class="main_item_category">Figma</span>
+                            </div>
+                        </div>
+
+                        <div class="main_item" data-categories="Education, Career">
+                            <div>
+                                <img class="main_item_img" src="/images/post-3.png" alt="photo">
+                            </div>
+
+                            <h2 class="main_item_title">Все научились программировать. А дальше-то что?</h2>
+
+                            <p class="main_item_text">Ученье — свет.</p>
+
+                            <div class="main_item_categories">
+                                <span class="main_item_category">Обучение</span>
+                                <span class="main_item_category">Карьера</span>
+                            </div>
+                        </div>
+
+                        <div class="main_item" data-categories="Education">
+                            <div>
+                                <img class="main_item_img" src="/images/post-4.png" alt="photo">
+                            </div>
+
+                            <h2 class="main_item_title">Мне тяжело учиться, кто поможет?</h2>
+
+                            <p class="main_item_text">Попали в патовую ситуацию? Тогда кликайте на статью.</p>
+
+                            <div class="main_item_categories">
+                                <span class="main_item_category">Обучение</span>
+                            </div>
+                        </div>
+
+                        <div class="main_item" data-categories="Education, Career">
+                            <div>
+                                <img class="main_item_img" src="/images/post-5.png" alt="photo">
+                            </div>
+
+                            <h2 class="main_item_title">Ключевые навыки фронтендеров в 2022</h2>
+
+                            <p class="main_item_text">Ежегодное исследование рынка от HTML Academy.</p>
+
+                            <div class="main_item_categories">
+                                <span class="main_item_category">Обучение</span>
+                                <span class="main_item_category">Карьера</span>
+                            </div>
+                        </div>
+
+                        <div class="main_item" data-categories="News">
+                            <div>
+                                <img class="main_item_img" src="/images/post-6.png" alt="photo">
+                            </div>
+
+                            <h2 class="main_item_title">Фронтенд-новости</h2>
+
+                            <p class="main_item_text">WAI-ARIA, новинки HTML-форм и 12 ошибок любого джаваскриптера.</p>
+
+                            <div class="main_item_categories">
+                                <span class="main_item_category">Новости</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="add_new_items">Загрузить ещё 6</button>
+                </div>
+
+                <div class="main_navigation">
+                    <h3 class="main_navigation_title">Рубрики</h3>
+
+                    <div class="main_navigation_content">
+                        <div>
+                            <button id="show_all_publication" class="blue_link">Показать все публикации</button>
+                        </div>
+
+                        <div class="headings">
+                            <button class="headings_btn blue_link" data-categories="Education">Обучение</button>
+
+                            <button class="headings_btn blue_link" data-categories="Career">Career</button>
+
+                            <button class="headings_btn blue_link" data-categories="Figma">Figma</button>
+
+                            <button class="headings_btn blue_link" data-categories="Console">Консоль</button>
+
+                            <button class="headings_btn blue_link" data-categories="Git">Git</button>
+
+                            <button class="headings_btn blue_link" data-categories="News">Новости</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="burger_blocks">
+                <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_nav">
+                    <a href="https://github.com/Green-tech591/Labs_Web" class="nav_link blue_link">Об авторе</a>
+                    <a href="#" class="nav_link blue_link">Технологии</a>
+                </div>
+
+                <p class="blog_year">© Blog, 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script type="module" src="/js/index.js"></script>
+</body>
+
+</html>

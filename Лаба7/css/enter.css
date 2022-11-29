@@ -1,0 +1,43 @@
+.center_window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+.modal {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: rgba(98, 76, 144, 0.7);
+    transition: 0.3s all;
+}
+
+.modal_content {
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgba(98, 76, 144, 0.5);
+    border-radius: 8px;
+
+    padding: 25px;
+
+    width: 35%;
+    height: auto;
+}
+
+.modal_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal_title {
+    font-weight: 777;
+    font-size: 24px;
+    line-height: 24px;
+}

@@ -1,0 +1,72 @@
+header {
+    background-color: #624C90;
+
+    padding: 15px 60px 15px 60px;
+}
+
+.logo {
+    z-index: 5;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav_links {
+    display: flex;
+    align-items: center;
+}
+
+.img_profile_div {
+    display: flex;
+    align-items: center;
+}
+
+.img_profile {
+    display: block;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav_link {
+    margin-left: 6%;
+    padding-bottom: 3px;
+
+    font-size: 20px;
+}
+
+/* header при зарегистрованном пользователе */
+.nav_links_btn {
+    width: 190px;
+}
+#btn_new_item {
+    min-width: 190px;
+}
+footer {
+    margin: 60px 0;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_nav {
+    display: flex;
+    align-items: center;
+}
+
+.footer .nav_link:first-child {
+    margin-left: 0;
+    width: 100px;
+}
+.normalize_width {
+    margin-left: 0;
+    width: 101px;
+}

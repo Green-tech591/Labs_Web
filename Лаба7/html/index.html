@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general_styles.css">
+    <link rel="stylesheet" href="/css/Up-Down.css">
+    <link rel="stylesheet" href="/css/enter.css">
+
+
+    <title>Лента публикаций</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+    <header>
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <img src="/images/BlogLogo.png" alt="logo">
+                </div>
+
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <nav class="nav">
+                    <div class="img_profile_div">
+                        <img class="img_profile" src="/images/Profile.svg" alt="photo">
+                    </div>
+
+                    <div class="nav_links">
+
+                        <a id="open_modalEnter" class="nav_link white_border" href="#">Войти</a>
+                        <a class="nav_link white_border" href="reg.html">Зарегистрироваться</a>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main m_top_60px">
+        <div class="container">
+            <h1 class="main_title">Последние публикации</h1>
+
+            <div class="main_content m_top_40px">
+
+                <div class="main_left">
+
+                    <div class="main_items">
+
+                        <div v-for="it in posts" class="main_item background_color_white">
+
+                            <img v-bind:src="it.image" class="main_item_img" alt="photo">
+
+                            <h2 class="main_item_title">
+                                {{it.title}}
+                            </h2>
+
+                            <p class="main_item_text">
+                                {{it.intro}}
+                            </p>
+
+                            <div class="main_item_categories">
+                                <span v-for="label in it.labels" class="main_item_category"
+                                    v-bind:data-categories="label">
+                                    {{label}}
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="add_new_items">Загрузить ещё 6</button>
+                </div>
+
+                <div class="main_navigation">
+                    <h3 class="main_navigation_title">Рубрики</h3>
+
+                    <div class="main_navigation_content">
+                        <div>
+                            <button id="show_all_publication" class="blue_link">Показать все публикации</button>
+                        </div>
+
+                        <div class="headings">
+                            <button class="headings_btn blue_link" data-categories="Education">Обучение</button>
+
+                            <button class="headings_btn blue_link" data-categories="Career">Career</button>
+
+                            <button class="headings_btn blue_link" data-categories="Figma">Figma</button>
+
+                            <button class="headings_btn blue_link" data-categories="Console">Консоль</button>
+
+                            <button class="headings_btn blue_link" data-categories="Git">Git</button>
+
+                            <button class="headings_btn blue_link" data-categories="News">Новости</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="burger_blocks">
+                <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_nav">
+                    <a href="https://github.com/Green-tech591/Labs_Web" class="nav_link blue_link">Об авторе</a>
+                    <a href="#" class="nav_link blue_link">Технологии</a>
+                </div>
+
+                <p class="blog_year">© Blog, 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal_enter" class="modal center_window">
+        <div class="modal_content center_window">
+            <div class="modal_top">
+                <div>
+                    <h3 class="modal_title">Вход</h3>
+                </div>
+
+                <div>
+                    <img id="form_img_close" src="/images/svg_close.svg" alt="close">
+                </div>
+            </div>
+
+            <form class="form" action="index.html" method="post">
+                <div class="form_item">
+                    <label class="form_label" for="login">Логин</label>
+                    <input id="login" class="form_input" type="text" name="user_name">
+                </div>
+
+                <div class="form_item m_top_20px">
+                    <label class="form_label" for="password">Пароль</label>
+                    <input id="password" class="form_input" type="password" name="user_password">
+                </div>
+
+                <div class="form_btns m_top_20px">
+                    <button id="btn_enter" class="form_btn btn_violet">Войти</button>
+                    <button id="btn_forgot_pass" class="form_btn">Забыли пароль?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="/js/vue.min.js"></script>
+    <script src="/js/post_list.js"></script>
+    <script src="/js/vue_main.js"></script>
+    <script type="module" src="/js/index.js"></script>
+</body>
+
+</html>

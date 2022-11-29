@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/author.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/general_styles.css">
+    <link rel="stylesheet" href="/css/Up-Down.css">
+    <link rel="stylesheet" href="/css/enter.css">
+
+
+    <title>Страница автора</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <header>
+            <div class="container">
+                <div class="header_content">
+                    <div class="logo">
+                        <img src="/images/BlogLogo.png" alt="logo">
+                    </div>
+
+                    <div class="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <nav class="nav">
+                        <div class="img_profile_div">
+                            <img class="img_profile" src="/images/Profile.svg" alt="photo">
+                        </div>
+
+                        <div class="nav_links">
+
+                            <a id="open_modal_enter" class="nav_link" href="#">@UserAccountLogin</a>
+                            <button id="btn_new_item" class="nav_links_btn white_btn background_color_white">Новая
+                                публикация</button>
+                            <a class="white_border">Выйти</a>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="main m_top_60px">
+            <div class="container">
+                <div class="main_content m_top_40px">
+                    <div class="user">
+                        <h1 class="user_title font_size_18" v-html="author_name">Иванов Иван Иванович</h1>
+
+                        <a href="#" class="blue_link font_size_18" v-html="author_login">@OtherUserAccountName</a>
+
+                        <div class="subscribers m_top_20px">
+                            <p class="font_size_18">Подписчиков: <span class="count_users"
+                                    v-html="subscribers"></span></p>
+                            <p class="font_size_18">Подписан: <span class="count_users" v-html="signed"></span></p>
+                        </div>
+
+                        <p class="font_size_18 m_top_20px">Записей: <span id="count_users" class="count_users"
+                                v-html="post_count"></span>
+                        </p>
+
+                        <div class="m_top_20px">
+                            <h3>Выберите автора</h3>
+
+                            <!-- option авторов формуриуются автоматически из authors.js -->
+                            <select id="select_authors" class="m_top_10px" v-model="selected_author_login">
+                                <option value="Посты всех авторов">Посты всех авторов</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main_left">
+
+                        <div class="main_items">
+                            <div class="main_item background_color_white" v-for="it in filterPosts">
+
+                                <img v-bind:src="it.image" class="main_item_img" alt="photo">
+
+                                <h2 class="main_item_title">
+                                    {{it.title}}
+                                </h2>
+
+                                <p class="main_item_text">
+                                    {{it.intro}}
+                                </p>
+
+                                <div class="main_item_categories">
+                                    <span v-for="label in it.labels" class="main_item_category"
+                                        v-bind:data-categories="label">
+                                        {{label}}
+                                    </span>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="add_new_items">Загрузить ещё 6</button>
+                    </div>
+
+                </div>
+
+                <div class="burger_blocks">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer_content">
+                    <div class="footer_nav">
+                        <a href="https://github.com/Green-tech591/Labs_Web" class="nav_link blue_link normalize_width">Об
+                            авторе</a>
+                        <a href="#" class="nav_link blue_link">Технологии</a>
+                    </div>
+
+                    <p class="blog_year">© Blog, 2022</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/vue.min.js"></script>
+    <script src="/js/post_list.js"></script>
+    <script src="/js/authors.js"></script>
+    <script src="/js/vue_main.js"></script>
+</body>
+
+</html>

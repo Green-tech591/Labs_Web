@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Header-Footer.css">
+    <link rel="stylesheet" href="registrator.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <title>Регистрация</title>
+</head>
+<body>
+    <header>
+        <div class="header_content">
+            <img class="logotype" src="images/BlogLogo.png" alt="logotype">
+
+            <nav class="flex-center">
+                <img class="flex-center" src="images/Profile.svg" alt="image_profile">
+
+                <div class="menu_links">
+
+                    <a class="menu_link white_border_link" href="#">Войти</a>
+                    <a class="menu_link white_border_link" href="#">Зарегистрироваться</a>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class = "workspace">
+        <h1 class = "reg_title">Регистрация</h1>
+
+        <div class = "reg_space">
+
+            <div class = "web">
+
+                <div class = "web_cells">
+                    <label class = "reg_label">Имя</label>
+                    <input class = "reg_input" type = "text">
+                </div>
+
+                <div class = "web_cells">
+                    <label class = "reg_label">Фамилия</label>
+                    <input class = "reg_input" type = "text">
+                </div>
+
+                <div class = "web_cells">
+                    <label class = "reg_label">Логин *</label>
+                    <input id = "login" class = "reg_input" type = "text">
+                    <div class = "condition">
+                        <div class = "just_flex">
+                            <img id = "confirm_l1">
+                            <p id = "parag_color_l1">Только буквы, цифры и символы @.+-_</p>
+                        </div>
+                        <div class = "just_flex">
+                            <img id = "confirm_l2">
+                            <p id = "parag_color_l2">От 5 до 150 символов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "web_cells">
+                    <label class = "reg_label">E-mail</label>
+                    <input class = "reg_input" type = "email">
+                </div>
+
+                <div class = "web_cells">
+                    <label class = "reg_label">Пароль *</label>
+                    <input id = "password" class = "reg_input" type = "password">
+                    <div class = "condition">
+                        <div class = "just_flex">
+                            <img id = "confirm_p1">
+                            <p id = "parag_color_p1">Минимум 8 символов</p>
+                        </div>
+                        <div class = "just_flex">
+                            <img id = "confirm_p2">
+                            <p id = "parag_color_p2">Не может состоять только из цифр</p>
+                        </div>
+                        <div class = "just_flex">
+                            <img id = "confirm_p3">
+                            <p id = "parag_color_p3">Не должен совпадать с логином</p>
+                        </div>
+                        <div class = "just_flex">
+                            <img id = "confirm_p4">
+                            <p id = "parag_color_p4">Не должен быть в базе популярных паролей</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "web_cells">
+                    <label class = "reg_label">Подтверждения пароля *</label>
+                    <input id = "conf_pass" class = "reg_input" type = "text">
+                    <div class = "condition">
+                        <div class = "just_flex">
+                            <img id = "confirm_c1">
+                            <p id = "parag_color_c1">Пароли совпадают</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "processing">
+                <input id = "check" type = "checkbox">
+                <label class = "label_proc">Даю своё согласие на обработку персональных данных</label>
+            </div>
+
+            <button id = "register_button" class = "purple_button">Зарегистрировать</button>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="workspace">
+            <div class="footer_content">
+                <div class="flex-center">
+                    <a href="https://github.com/Green-tech591/Labs_Web" class="menu_link blue_border_link">Об авторе</a>
+                    <a href="#" class="menu_link blue_border_link">Технологии</a>
+                </div>
+
+                <p class="copyright">© Blog, 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="registrator.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Всё, что появляется при нажатии кнопки войти */
+.enter {
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(98, 76, 144, 0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+}
+
+/* Форма войти */
+.form_content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+
+    padding: 20px;
+
+}
+
+/* Заголовок + крестик */
+.enter_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Заголовок */
+.enter_title {
+    font-family: Arial;
+    font-size: 24px;
+}
+
+/* Крестик */
+.enter_close {
+    cursor: pointer;
+}
+
+/* Место для заполнения логина и пароля */
+.login_password {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+}
+
+/* Логин/пароль */
+.log_pass {
+    color: rgba(44, 47, 53, 0.5);
+}
+
+/* Все поля ввода */
+.input {
+    padding: 24px;
+    margin-top: 4px;
+    border: 1px solid rgba(48, 52, 58, 0.5);
+    border-radius: 8px;
+    height: 20px;
+}
+
+/* Место кнопок */
+.enter_buttons {
+    margin-top: 20px;
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+}
+
+/* Кнопка войти */
+.enter_button {
+    width: 125px;
+    height: 45px;
+    font-size: 15px;
+    padding: 5px;
+    margin-right: 20px;
+    background-color: rgba(87, 56, 153, 0.7);
+    font-family: Arial;
+    font-weight: 700;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Фиолетовая ссылка */ 
+.purple_link {
+    color: rgba(87, 56, 153, 0.7);
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 15px;
+}

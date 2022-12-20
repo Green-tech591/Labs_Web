@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Header-Footer.css">
+    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <title>Добавить запись</title>
+</head>
+<body>
+    <header>
+        <div class="header_content">
+            <img class="logotype" src="images/BlogLogo.png" alt="logotype">
+
+            <nav class="flex-center">
+                <img class="flex-center" src="images/Profile.svg" alt="image_profile">
+
+                <div class="menu_links">
+
+                    <a class="UserAccountLogin" href="#">@UserAccountLogin</a>
+                    <button class="white_button">Новая запись</button>
+                    <a class="menu_link white_border_link" href="#">Выйти</a>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class = "workspace">
+        <h1 class = "post_title">Добавить запись</h1>
+
+        <div class = "post_space">
+
+            <label class = "post_label">Заголовок</label>
+            <input class = "post_input" type = "text">
+
+            <label class = "post_label">Текст</label>
+            <textarea class = "post_input text" type = "text"></textarea>
+
+            <label class = "post_label">Выберите категорию</label>
+            <select class = "post_input">
+                <option>Без категории</option>
+                <option>GIT</option>
+                <option>Console</option>
+                <option>FIGMA</option>
+                <option>Скоро зачёт, а ты валенок</option>
+            </select>
+
+            <div class = "space">
+
+                <input id="add_img" class="button_add" type="file" accept="image/*">
+                <label class = "button_add">
+                    <img src = "images/add.svg">
+                    <label class = "text_button">Прикрепить файл изображения</label>
+                </label>
+
+                <img id = "img_file">
+            </div>
+
+            <button class = "purple_button">Опубликовать</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="workspace">
+            <div class="footer_content">
+                <div class="flex-center">
+                    <a href="https://github.com/Green-tech591/Labs_Web" class="menu_link blue_border_link">Об авторе</a>
+                    <a href="#" class="menu_link blue_border_link">Технологии</a>
+                </div>
+
+                <p class="copyright">© Blog, 2022</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="post.js"></script>
+</body>
+</html>
